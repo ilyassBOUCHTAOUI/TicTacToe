@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="Style.css">
+    <title>Tic Tac Toe</title>
+</head>
+
+<body>
+    <div id="container">
+
+        <div id="head">
+            <h1 id="xplayer">X</h1>
+            <h1 id="oplayer">O</h1>
+        </div>
+        <div id="underline"></div>
+        <div id="tictactoe">
+            <div class="triple">
+                <div id="1" class="element" onclick="Play(this)"></div>
+                <div id="2" class="element" onclick="Play(this)"></div>
+                <div id="3" class="element" onclick="Play(this)"></div>
+            </div>
+            <div class="triple">
+                <div id="4" class="element" onclick="Play(this)"></div>
+                <div id="5" class="element" onclick="Play(this)"></div>
+                <div id="6" class="element" onclick="Play(this)"></div>
+            </div>
+            <div class="triple">
+                <div id="7" class="element" onclick="Play(this)"></div>
+                <div id="8" class="element" onclick="Play(this)"></div>
+                <div id="9" class="element" onclick="Play(this)"></div>
+            </div>
+        </div>
+        <div id="GameOver" onclick="PlayAgain()">
+            <div id="winner"></div>
+            <div id="winWord">winner !</div>
+        </div>
+        <div id="score">
+            <div class="xscore">
+                <h3>Player (X)</h3>
+                <h3><span id="x_wins"></span></h3>
+            </div>
+            <div>
+                <h3>Player (O)</h3>
+                <h3><span id="o_wins"></span></h3>
+            </div>
+        </div>
+    </div>
+
+    <script src="TicTacToe.js"></script>
+</body>
+
+</html>

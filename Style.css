@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box !important;
+}
+
+body {
+    background-image: linear-gradient(#92FE9D,#00C9FF);
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+
+#container {
+    height: 550px;
+    width: 500px;
+    position: relative;
+    top: 20px;
+    border-radius: 15px;
+}
+
+#head {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.3em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#xplayer, #oplayer{
+    transition: 0.5s color;
+}
+#oplayer{
+    color: #FFFFFF;
+}
+#underline{
+    background-color: red;
+    border-radius: 15px;
+    position: relative;
+    top: -150px;
+    width: 50px;
+    height: 8px;
+    top: -150px;
+    left:98px;
+    animation-name:none;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+}
+
+#tictactoe {
+    display:none ;
+}
+
+.element {
+    height: 105px;
+    width: 166px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    font-size: 3em;
+    font-weight: bold;
+    cursor: default;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+#GameOver{
+    cursor: pointer;
+}
+#winner{
+    display: none;
+    position: relative;
+    justify-content: center;
+    color: #EBECED;
+    animation-name: o_winner;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+#winWord{
+    display: none;
+    position: absolute;
+    top: 250px;
+    left: 125px;
+    height: 170px;
+    text-align: center;
+    font-size: 1em;
+    font-family: 'Comic Sans MS', sans-serif;
+    animation-name: winner_word;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+}
+#score {
+    display: flex;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position: absolute;
+    top: 430px;
+    left: 150px;
+    text-align: center;
+    color: #0060DB;
+}
+.xscore{
+    margin-right: 180px;
+    margin-left: -80px;
+}
+@keyframes x_role {
+    from{top: -35px; left: 349px;}
+    to{top: -35px; left: 98px; }
+}
+@keyframes o_role {
+    from{top: -35px; left: 98px;}
+    to{top: -35px; left: 349px;}
+}
+@keyframes x_firstrole {
+    from{left: 98px;}
+    to{
+        top: -35px;
+        left: 98px;
+    }
+}
+@keyframes o_firstrole {
+    from{}
+    10%{top:-200px;left: 349px;}
+    100%{
+        top: -35px;
+        left: 349px;
+    }
+    
+}
+@keyframes x_winner {
+    from{top: -400px;}
+    to{
+        top: -35px;
+        font-size: 16em;
+        margin-top: -25px;
+        margin-bottom: -70px;
+        font-weight: bold;
+        box-sizing: border-box;
+        transform: rotate(45deg);
+    }
+    
+}
+
+@keyframes o_winner {
+    from {top: -400px;}
+    to {
+        top: 0;
+        height: 120px;
+        width: 120px;
+        margin-top: 25px;
+        margin-left: 38%;
+        border-radius: 50%;
+        border: 16px solid #EBECED;
+        box-sizing: border-box;
+    }
+}
+@keyframes draw {
+    from{}
+    to{
+        height: 300px;
+        font-size: 8em;
+        margin-top: 50px;
+        margin-bottom: -35px;
+    }
+
+}
+@keyframes winner_word {
+    from{}
+    to{
+        font-size: 5em;
+        transform: rotate(360deg);
+    }
+
+}
